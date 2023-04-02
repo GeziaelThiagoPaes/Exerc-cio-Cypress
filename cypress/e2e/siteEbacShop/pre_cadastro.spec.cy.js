@@ -1,13 +1,13 @@
 /// <reference types = "cypress"/>
 const { faker } = require("@faker-js/faker");
 
-describe('Realizar um novo cadastro!', () => {
+describe('Realizar um novo cadastro na loja Ebac-Shop', () => {
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
     });
 
 
-it('Realizar o novo cadastro', () => {
+it('Criar um novo cadastro', () => {
     let email = faker.internet.email();
     let password = 123;
 
@@ -20,7 +20,7 @@ it('Realizar o novo cadastro', () => {
     
 });
 
-it('Adicionar o nome e sobrenome ', () => {
+it('Adicionar o nome e sobrenome na conta cadastrada', () => {
     let login = 'Noemy.Pfeffer@yahoo.com'
     let senha = 123;
     let nome = faker.name.firstName();

@@ -1,6 +1,6 @@
 ///<reference types= "cypress"/>
 
-context('Acessar a plataforma Ebac Shop', () => {
+context('Acessar a plataforma Ebac-Shop', () => {
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
     });

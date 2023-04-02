@@ -1,7 +1,7 @@
 /// <reference types = "cypress"/>
 const { faker } = require("@faker-js/faker");
 
-describe('Escolher produtos da loja', () => {
+describe('Escolher produtos da loja Ebac-Shop', () => {
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/');
     });
@@ -10,7 +10,7 @@ describe('Escolher produtos da loja', () => {
         cy.screenshot()
     });
 
-    it('Escolher um produto', () => {
+    it('Escolher um produto da loja', () => {
 
         var mensagem_carrinho = 5;
         let login = 'Noemy.Pfeffer@yahoo.com'
@@ -35,7 +35,7 @@ describe('Escolher produtos da loja', () => {
 
     });
 
-    it.only('remover item do carrinho', () => {
+    it.only('Remover o item do carrinho', () => {
 
         let login = 'Noemy.Pfeffer@yahoo.com'
         let senha = 123;
@@ -59,7 +59,8 @@ describe('Escolher produtos da loja', () => {
 
         cy.get('.woocommerce-message > .button').click();
         cy.get('.remove > .fa').click();
-        cy.get('.woocommerce-message').should('contain', nome_produto)
+        cy.get('.woocommerce-message').should('contain', nome_produto);
+    
     });
 
 });
