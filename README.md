@@ -1,1 +1,1 @@
-# Exerc-cio-Cypress
+# Exercicio-Cypress
