@@ -1,0 +1,24 @@
+{
+  "name": "exerc-cio-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeziaelThiagoPaes/Exerc-cio-Cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeziaelThiagoPaes/Exerc-cio-Cypress/issues"
+  },
+  "homepage": "https://github.com/GeziaelThiagoPaes/Exerc-cio-Cypress#readme",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.9.0"
+  }
+}
