@@ -1,7 +1,11 @@
 ///<reference types= "cypress"/>
+
+// criando a variável que irá trazer os dados da fixture > perfil.json.
+
 const perfil = require('../../fixtures/perfil.json');
 context('Acessar a plataforma Ebac-Shop', () => {
     beforeEach(() => {
+        // não será necessário adicionar a url totalmente, apenas a página em específico.
         cy.visit('minha-conta')
     });
 
@@ -16,7 +20,7 @@ context('Acessar a plataforma Ebac-Shop', () => {
         // realizado o login
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, Aluno (não é Aluno?')
     });
-    it('Deve fazer o login corretamente - arquivo de dados', () => {
+    it('Deve fazer o login corretamente - utilizando arquivo de dados', () => {
 
         cy.get('#username').type(perfil.usuario)
         cy.get('#password').type(perfil.senha)
@@ -24,11 +28,11 @@ context('Acessar a plataforma Ebac-Shop', () => {
         cy.get('.woocommerce-form > .button').click()
     });
 
-    it.only('Deve fazer login com sucesso - usando fixture', () => {
-        cy.fixture('perfil').then(dados =>{
+    it.only('Deve fazer login com sucesso - utilizando fixture', () => {
+        cy.fixture('perfil').then(dados => {
 
             cy.get('#username').type(dados.usuario)
-            cy.get('#password').type(dados.senha, {log:false})
+            cy.get('#password').type(dados.senha, { log: false })
             cy.get('#rememberme').click()
             cy.get('.woocommerce-form > .button').click()
 

@@ -1,3 +1,4 @@
+// adicionado a url global para referenciar em todos os testes.
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
