@@ -3,13 +3,14 @@ const { faker } = require("@faker-js/faker");
 
 describe('Realizar um novo cadastro na loja Ebac-Shop', () => {
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
+        cy.visit('minha-conta');
     });
 
 
 it('Criar um novo cadastro', () => {
     let email = faker.internet.email();
     let password = 123;
+
 
     cy.get('#reg_email').type(email)    
     cy.get('#reg_password').type(password)

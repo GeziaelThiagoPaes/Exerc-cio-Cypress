@@ -3,7 +3,7 @@ const { faker } = require("@faker-js/faker");
 
 describe('Escolher produtos da loja Ebac-Shop', () => {
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/');
+        cy.visit('produtos');
     });
 
     afterEach(() => {
