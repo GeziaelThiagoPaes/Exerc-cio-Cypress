@@ -42,4 +42,11 @@ it('Adicionar o nome e sobrenome na conta cadastrada', () => {
 
 });
 
+it.only('Deve realizar o cadastro com os comandos customizados', () => {
+
+    let email_Faker = faker.internet.email();
+    cy.Pre_Cadastro(email_Faker,'@123456', 'Jose', 'Bernardo')
+
+});
+
 }); 
